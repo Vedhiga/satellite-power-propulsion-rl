@@ -406,7 +406,7 @@ if __name__ == "__main__":
     plot_q_heatmap(data["Q_table"])
     stats = print_stats(data)
 
-    print("\n✅ All outputs saved to /mnt/user-data/outputs/")
+    print("\n✅ All outputs saved to ./outputs/")
     print("   → training_results.png")
     print("   → q_table_heatmap.png")
     print("   → sim_stats.json")
