@@ -214,7 +214,7 @@ COLORS = {
 def smooth(arr, w=20):
     return np.convolve(arr, np.ones(w)/w, mode='valid')
 
-def plot_training_results(data, save_path="/mnt/user-data/outputs/training_results.png"):
+def plot_training_results(data, save_path="./outputs/training_results.png"):
     fig = plt.figure(figsize=(18, 12), facecolor=COLORS["bg"])
     gs  = gridspec.GridSpec(3, 3, figure=fig, hspace=0.45, wspace=0.35)
 
@@ -320,7 +320,7 @@ def plot_training_results(data, save_path="/mnt/user-data/outputs/training_resul
     plt.close()
     print(f"✅ Saved: {save_path}")
 
-def plot_q_heatmap(Q_table, save_path="/mnt/user-data/outputs/q_table_heatmap.png"):
+def plot_q_heatmap(Q_table, save_path="./outputs/q_table_heatmap.png"):
     Q = np.array(Q_table)
     fig, axes = plt.subplots(1, N_ACTIONS, figsize=(16, 5), facecolor=COLORS["bg"])
     plt.rcParams.update({"font.family": "monospace", "text.color": COLORS["text"]})
@@ -385,7 +385,7 @@ def print_stats(data):
         "avg_orbit_last_ep":   round(float(np.mean(data["last_orbit"])), 2),
         "battery_violations":  int(sum(1 for b in data["last_battery"] if b < BATTERY_MIN)),
     }
-    with open("/mnt/user-data/outputs/sim_stats.json", "w") as f:
+    with open("./outputs/sim_stats.json", "w") as f:
         json.dump(stats, f, indent=2)
     print("✅ Saved: sim_stats.json")
     return stats
