@@ -1,0 +1,11 @@
+{
+  "episodes": 600,
+  "avg_reward_first50": -17.7536,
+  "avg_reward_last50": 26.6024,
+  "improvement_pct": 249.84,
+  "best_reward": 35.5208,
+  "final_epsilon": 0.05,
+  "avg_battery_last_ep": 77.44,
+  "avg_orbit_last_ep": 0.57,
+  "battery_violations": 0
+}
